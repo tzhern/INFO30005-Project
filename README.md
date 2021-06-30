@@ -95,9 +95,9 @@ Project is created with:
 
 ## Deliverable 3 Instruction
 ### Login Section
-dummy customer: 
-Email Address: kcathy@gmail.com
-Password: 123123
+1. dummy customer: 
+   - Email Address: kcathy@gmail.com
+   - Password: 123123
 
 ### Van detail
 We only have one van open, which is SnackSquid.
