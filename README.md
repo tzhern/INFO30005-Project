@@ -1,35 +1,35 @@
 **The University of Melbourne**
-# INFO30005 – Web Information Technologies
-
-# Snack Squid Repository
-
-## Updates
-### 23 April 2021
-To check delivarable 2, please go to [Deliverable 2 Instruction](#deliverable-2-instruction). Note: please mark **"snack-squid"** folder. Commit Id is
-
+# INFO30005 (Web Information Technologies) Project
+# Snack Squid
 
 ## Table of contents
+* [Introduction](#introduction)
 * [Team Members](#team-members)
 * [Technologies](#technologies)
 * [Deliverable 2 Instruction](#deliverable-2-instruction)
+* [Deliverable 3 Instruction](#deliverable-3-instruction)
 * [Code Implementation](#code-implementation)
+
+## Introduction
+Customer web app: https://snack-squid.herokuapp.com/customer/
+Vendor web app  : https://snack-squid.herokuapp.com/vendor/
 
 ## Team Members
 
-| Name         |   State  |  StudentID  |
-| :---         |   -----  |       ---:  |
-| Tom Zhi Hern | Working  |   1068268   |
-| Qian Ziyu    | Working  |   1067810   |
-| Yu Kaixin    | Working  |   1118795   |
-| Yi Qiteng    | Working  |   1048534   |
-| Chen Yi      | Working  |   911748    |
+| Name         |   Status |
+| :---         |   -----  |
+| Tom Zhi Hern |   Done   |
+| Qian Ziyu    |   Done   |
+| Yu Kaixin    |   Done   |
+| Yi Qiteng    |   Done   |
+| Chen Yi      |   Done   |
 
 
 ## Technologies
 Project is created with:
 * NodeJs : 14.16.X
 * Express : 4.17.1
-* mongoose : 5.12.3
+* Mongoose : 5.12.3
 
 ### Accessing MongoDB Atlas
 - Username: ziyuq@student.unimelb.edu.au
@@ -44,13 +44,13 @@ Project is created with:
     npm test -- profile_controller_unit.js   unit testing van's close status
     npm test -- one_van_status_integration.js   integration test van's status
 
-### Dummy Customer
+### Dummy Customer account
     1. email address: cathy@gmail.com   password: 1234qwer
     2. email address: ziyuq@gmail.com   password: 1234qwer
     3. email address: tom@gmail.com     password: 1234qwer
     4. email address: hehe@gmail.com    password: 1234qwer
     5. email address: chenyi@gmail.com  password: 1234qwer
-### Dummy Van
+### Dummy Van account
     1. van name: SnackSquid    password: 1234qwer
     2. van name: Pinacolada    password: 1234qwer
     3. van name: Okie          password: 1234qwer
@@ -94,7 +94,7 @@ Project is created with:
     ![img-06](img/img-06.png)
 
 
-## Deliverable 3 
+## Deliverable 3 Instruction
 ### Login Section
 dummy customer: 
 Email Address: kcathy@gmail.com
@@ -117,12 +117,4 @@ If the user has not logged in, you cannot checkout and will be rendered to login
 After placing order, the page will redirect to order page.
 
 To logout, use https://snack-squid.herokuapp.com/customer/profile and click logout button
-**Now Get ready to complete all the tasks:**
-
-- [x] Read the Project handouts carefully
-- [x] User Interface (UI)mockup
-- [x] App server mockup
-- [x] Front-end + back-end (one feature)
-- [x] Complete system + source code
-- [ ] Report on your work(+ test1 feature)
 
