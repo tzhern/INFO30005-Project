@@ -1,6 +1,5 @@
 **The University of Melbourne**
-# INFO30005 (Web Information Technologies) Project
-# Snack Squid
+**INFO30005 (Web Information Technologies) Project**
 
 ## Table of contents
 * [Introduction](#introduction)
