@@ -11,8 +11,8 @@
 * [Code Implementation](#code-implementation)
 
 ## Introduction
-Customer web app: https://snack-squid.herokuapp.com/customer/
-Vendor web app  : https://snack-squid.herokuapp.com/vendor/
+* Customer web app: https://snack-squid.herokuapp.com/customer/
+* Vendor web app  : https://snack-squid.herokuapp.com/vendor/
 
 ## Team Members
 
