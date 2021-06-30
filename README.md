@@ -8,7 +8,6 @@
 * [Technologies](#technologies)
 * [Deliverable 2 Instruction](#deliverable-2-instruction)
 * [Deliverable 3 Instruction](#deliverable-3-instruction)
-* [Code Implementation](#code-implementation)
 
 ## Introduction
 * Customer web app: https://snack-squid.herokuapp.com/customer/
