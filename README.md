@@ -1,5 +1,5 @@
-**The University of Melbourne**
-**INFO30005 (Web Information Technologies) Project**
+### **The University of Melbourne**
+### **INFO30005 (Web Information Technologies) Project**
 
 ## Table of contents
 * [Introduction](#introduction)
