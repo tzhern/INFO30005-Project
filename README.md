@@ -95,7 +95,7 @@ Project is created with:
 
 ## Deliverable 3 Instruction
 ### Login Section
-1. dummy customer: 
+1. dummy customer account: 
    - Email Address: kcathy@gmail.com
    - Password: 123123
 
