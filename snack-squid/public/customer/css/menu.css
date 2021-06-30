@@ -1,0 +1,859 @@
+body {
+    background-image: url("../images/background_menu.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Josefin Slab', serif;
+    color: #774C37;
+    padding: 0;
+    margin: 0;
+}
+
+.icon {
+    background: url("../images/snacksquid_icon1.png");
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    background-size: 120px 120px;
+    left: 3%;
+    top: 1%;
+    border-radius: 100px;
+}
+
+.menu_headline {
+    background: url("../images/menu_headline.png");
+    background-repeat: no-repeat;
+    position: relative;
+    height: 874px;
+    width: 224px;
+    background-size: 80%;
+    left: 50%;
+    top: 10%;
+}
+
+.profile_icon {
+    background: url("../images/profile_icon.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    left: 100%;
+    top: 10%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(30px, auto);
+    grid-template-areas: '. cart' '. title' 'snacks drinks' 'snacks drinks' '. Ordering' 'notification notification' 'state .' 'preparingOrders preparingOrders';
+    padding: 0 2% 0 2%;
+}
+
+.profile {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    color: #774C37;
+    font-size: 55px;
+}
+
+
+/* menu page */
+
+.snacks {
+    grid-area: snacks;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    justify-items: center;
+    row-gap: 10%;
+    grid-template-areas: 'subtitle1 subtitle1';
+}
+
+.drinks {
+    grid-area: drinks;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    justify-items: center;
+    border-left: 5px solid #9B6F5B;
+    /* This creates the border. Replace black with whatever color you want. */
+    row-gap: 10%;
+    grid-template-areas: 'subtitle2 subtitle2';
+}
+
+
+/* grid-template-areas: 
+                'd001 d002'
+                'd003 d004'
+            }
+
+            #d001{
+                grid-area: d001;
+            }
+
+            #d002{
+                grid-area: d002;
+            } */
+
+#title {
+    grid-area: title;
+    font-size: 6rem;
+    padding-left: 80px;
+    letter-spacing: 40px;
+    content: "";
+    /* This is necessary for the pseudo element to work. */
+    display: block;
+    /* This will put the pseudo element on its own line. */
+    width: 30%;
+    /* Change this to whatever width you want. */
+    border-bottom: 5px solid #9B6F5B;
+    /* This creates the border. Replace black with whatever color you want. */
+}
+
+#subtitle1 {
+    grid-area: subtitle1;
+    justify-self: center;
+    margin-bottom: -30px;
+}
+
+h2,
+.overlay {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+#snackicon-img {
+    width: 85px;
+    height: 85px;
+    background-image: url(https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 50%;
+}
+
+#subtitle2 {
+    grid-area: subtitle2;
+    justify-self: center;
+    margin-bottom: -30px;
+}
+
+#drinkicon-img {
+    width: 85px;
+    height: 85px;
+    background-image: url(https://images.unsplash.com/photo-1541167760496-1628856ab772?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1494&q=80);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 50%;
+}
+
+.foodListing img {
+    width: 180px;
+    height: 140px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    clip-path: polygon(0 0, 66% 0, 100% 100%, 0 100%);
+    object-fit: cover;
+}
+
+.foodListing {
+    width: 320px;
+    height: 140px;
+    border: 2px solid #DAD1C0;
+    display: flex;
+    background-color: #F1E8DF;
+    border-radius: 40px;
+    box-shadow: 5px 9px 6px rgba(0, 0, 0, 0.16);
+}
+
+#food-detail {
+    width: 200px;
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 46px);
+    justify-items: center;
+    grid-template-areas: 'foodName foodName foodName' 'foodPrice foodPrice foodPrice' 'addCart quantity removeCart';
+    margin: 0;
+}
+
+.foodName {
+    margin-top: 10px;
+    margin-right: 15px;
+    grid-area: foodName;
+}
+
+.foodPrice {
+    grid-area: foodPrice;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.addCart {
+    grid-area: addCart;
+    cursor: pointer;
+}
+
+.quantity {
+    grid-area: quantity;
+    align-self: center;
+}
+
+.removeCart {
+    grid-area: removeCart;
+    cursor: pointer;
+}
+
+.removeCart,
+.addCart {
+    border: hidden;
+    background-color: transparent;
+    font-size: 30px;
+    color: #774C37;
+}
+
+.Ordering {
+    grid-area: Ordering;
+    justify-self: right;
+    width: 320px;
+    margin-top: 15vh;
+    display: flex;
+    border: 3px solid #F1E8DF;
+    margin-right: 7%;
+}
+
+#ordering-text {
+    font-size: 40px;
+    width: 250px;
+    font-family: 'Josefin Slab';
+    color: #DBC9C2;
+    border: hidden;
+}
+
+#cartbutton {
+    background-color: transparent;
+    border: none;
+}
+
+#Cart-img {
+    clip-path: none;
+    width: 65px;
+    height: 65px;
+}
+
+#Cart-img,
+#ordering-text:hover {
+    cursor: pointer;
+}
+
+.cart {
+    grid-area: cart;
+    position: sticky;
+    top: 30px;
+    right: 80px;
+    justify-self: right;
+}
+
+#cartdetail {
+    margin-right: 80px;
+}
+
+#cartdetail i{
+    margin-right: 5px;
+}
+
+/* Overlay cart */
+
+.overlay {
+    background: #F1E8DF;
+    position: fixed;
+    /* Sit on top of the page content */
+    width: 0;
+    height: 100%;
+    /* Full height (cover the whole page) */
+    right: 0;
+    z-index: 1;
+    overflow-y: scroll;
+    transition: 0.5s;
+}
+
+.overlay button {
+    margin: 5vh 0 0 75px;
+    background-color: transparent;
+    border: none;
+    width: 58px;
+    height: 58px;
+}
+
+.overlay i {
+    font-size: 58px;
+    color: #774C37;
+    cursor: pointer;
+}
+
+.products-container {
+    column-count: 2;
+    column-gap: 40px;
+    margin: 0 50px 0 50px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.line {
+    margin-top: 20px;
+    column-span: all;
+    border-top: 10px solid #DBCAC2;
+}
+
+.overlayfood {
+    margin: 3vh 0 2vh 8vw;
+    column-span: all;
+}
+
+.overlayquantity {
+    margin-left: 11vw;
+    /* margin-right: 20vw; */
+}
+
+.overlaytotal {
+    margin-left: 8vw;
+}
+
+.basketTotalContainer {
+    column-span: all;
+    margin-top: 30px;
+    text-align: right;
+}
+
+.basketTotal {
+    margin-left: 5vw;
+}
+
+#checkout {
+    column-span: all;
+    width: 232px;
+    height: 75px;
+    font-size: 33px;
+    color: #774C37;
+    background: #DAD1C0;
+    border-radius: 32px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+}
+
+#checkout:hover {
+    cursor: pointer;
+}
+
+.foodListing {
+    transition: ease-in-out, .1s ease-in-out;
+}
+
+.foodListing:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 18px 12px rgba(0, 0, 0, 0.16);
+}
+
+
+/* Food Detail */
+
+#detailPage {
+    display: flex;
+    margin: 25vh 20% 0 15%;
+}
+
+.detail-img {
+    margin-right: 2vw;
+}
+
+.detail-img img {
+    width: 32.5vw;
+    height: 50vh;
+    border-radius: 115px;
+    object-fit: cover;
+    box-shadow: 20px 15px 13px rgba(0, 0, 0, 0.16);
+}
+
+#detailListing {
+    padding: 10px;
+    width: auto;
+    height: 350px;
+    border-radius: 0;
+    background: #E1D8D1;
+    margin: 3vh 0 0 2vw;
+    font-size: 25px;
+    line-height: 27px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.quantitybox {
+    align-self: center;
+    width: 60%;
+    letter-spacing: 20px;
+    line-height: 31px;
+    background-color: #B4917F;
+    border-radius: 115px;
+    margin-top: 20px;
+}
+
+.quantitybox button {
+    font-size: 40px;
+}
+
+.quantitybox span {
+    font-size: 30px;
+    padding-left: 0.5vw;
+}
+
+#detailListing p {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#detailListing h1 {
+    padding-top: 30px;
+    font-size: 44px;
+    letter-spacing: 5px;
+}
+
+#detailOrdering {
+    border: none;
+    width: 400px;
+    align-self: center;
+    margin: 100px 0 0 4vw;
+}
+
+#detailOrdering button {
+    background-color: #F1E8DF;
+    color: #B4917F;
+}
+
+.pageBack {
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    display: block;
+    font-size: 65px;
+    color: #774C37;
+}
+
+.cart {
+    text-align: right;
+    height: 0;
+    margin: 0;
+}
+
+.orderInfo {
+    margin: 0 13vw 0 13vw;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    grid-area: orderInfo;
+    align-items: center;
+}
+
+
+/* For OrderPage */
+
+.state {
+    grid-area: state;
+    margin-left: 30%;
+}
+
+.state button {
+    font-size: 20px;
+    color: #AD7863;
+    border: 2px solid #DBCAC2;
+    width: 180px;
+    height: 38px;
+    font-family: 'Josefin Slab', serif;
+}
+
+.notification {
+    grid-area: notification;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+#preparingButton {
+    background-color: #DBCAC2;
+}
+
+#fulfilledButton{
+    background: none;
+}
+
+#completedButton{
+    background: none;
+}
+
+table {
+    padding: 8px;
+    background-color: #F1E9E1;
+}
+
+#lineOrder {
+    margin: 0;
+}
+
+.preparingOrders,
+.fulfilledOrders,
+.completedOrders {
+    grid-area: preparingOrders;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 33px;
+    margin: 0 15% 0 15%;
+    color: #361811;
+    font-weight: 600;
+}
+
+.fulfilledOrders,
+.completedOrders{
+    display: none;
+}
+
+.orderID {
+    font-size: 23px;
+    color: #774C37;
+}
+
+.detail {
+    padding: 10px 0 10px 30px;
+    font-weight: 500;
+}
+
+.timeRemaining,
+.orderTime,
+.timeStamp,
+.dicountTime {
+    text-align: left;
+    width: 40%;
+}
+
+.thinfont {
+    font-weight: 500;
+}
+
+.change-cancel {
+    color: #774C37;
+    text-underline-offset: 2px;
+}
+
+.timestamp {
+    display: none;
+}
+
+
+/* For Map */
+
+#findVan {
+    padding: 0;
+}
+
+.map-container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    grid-template-areas: 'location map map';
+}
+
+#map {
+    grid-area: map;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    grid-area: location;
+    background: #F1E8DF;
+    overflow-y: scroll;
+
+}
+
+.top-bar{
+    display: flex;
+    border-bottom: 8px solid #774C37;
+    margin-bottom: 20px;
+}
+
+#icon-map {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    background-size: 120px 120px;
+    border-radius: 100px;
+}
+
+.mapvan {
+    background: url("../images/cart2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 125px;
+    background-position-y: center;
+    margin-bottom: 5px;
+    margin-left: -50px;
+
+}
+
+.vanListing {
+    border-radius: 42px;
+    width: 70%;
+    height: 103px;
+    margin-left: 15%;
+    text-align: center;
+    padding: 5px;
+    color: #707070;
+    cursor: pointer;
+    transition: ease-in-out, .2s ease-in-out;
+
+}
+
+.vanListing:hover{
+    background: #DAD1C0;
+
+}
+
+p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.vanName {
+    margin: 15px 0 10px 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.vanId {
+    display: none;
+}
+
+#map-profile {
+    position: relative;
+    margin-top: 20px;
+}
+
+#lineMap {
+    margin-bottom: 20px;
+}
+
+.geoLocation{
+    display: none;
+}
+
+
+/* For Ipads */
+
+@media only screen and (max-width:1300px) {
+    .container {
+        grid-template-areas: '. cart' '. title' 'snacks snacks' 'drinks drinks' '. Ordering' 'notification notification' 'state state' 'preparingOrders preparingOrders';
+    }
+    #title {
+        margin-top: 100px;
+    }
+    .drinks {
+        border-left: 0;
+        border-top: 5px solid #9B6F5B;
+        /* This creates the border. Replace black with whatever color you want. */
+        margin-top: 150px;
+        padding-top: 50px;
+    }
+    .products-container {
+        column-count: 1;
+    }
+    .overlayfood,
+    .overlayquantity,
+    .overlaytotal {
+        margin-left: 0;
+        text-align: center;
+    }
+    #detailPage {
+        flex-direction: column;
+        margin: 15vh 20% 0 20%;
+    }
+    #detailListing {
+        margin-left: 0;
+    }
+    .detail-img {
+        margin-right: 0;
+    }
+    .detail-img img {
+        width: 57vw;
+        height: 50vh;
+        border-radius: 0;
+        box-shadow: 20px 15px 13px rgba(0, 0, 0, 0.16);
+    }
+    #detailOrdering button {
+        background-color: #E1D8D1;
+    }
+    #cartdetail {
+        margin-right: 80px;
+    }
+    #cartdetail i{
+        margin-right: 5px;
+    }
+    .state {
+        margin-left: 5%;
+    }
+    .preparingOrders,
+    .fulfilledOrders,
+    .completedOrders {
+        font-size: 17px;
+        line-height: 28px;
+        margin: 0 5% 0 5%;
+    }
+    .orderID {
+        font-size: 19px;
+    }
+    #findVan {
+        padding: 0;
+    }
+    .map-container {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        grid-template-areas: 'location map';
+    }
+}
+
+
+/* For mobile phones */
+
+@media only screen and (max-width:650px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 'cart' 'title' 'snacks' 'drinks' 'Ordering' 'notification notification' 'state' 'preparingOrders';
+    }
+    .snacks {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 'subtitle1';
+    }
+    .drinks {
+        border-left: 0;
+        border-top: 5px solid #9B6F5B;
+        /* This creates the border. Replace black with whatever color you want. */
+        margin-top: 350px;
+        padding-top: 50px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 'subtitle2';
+    }
+    .Ordering {
+        position: sticky;
+        bottom: 0;
+        grid-area: Ordering;
+        justify-self: right;
+        width: 80px;
+        margin-top: 400px;
+        display: flex;
+        border: none;
+        margin-right: 0;
+    }
+    #ordering-text {
+        display: none;
+    }
+    #title {
+        font-size: 15vw;
+    }
+    .products-container {
+        column-count: 2;
+    }
+    #detailPage {
+        margin: 20vh 10% 0 10%;
+    }
+    .detail-img img {
+        width: 75vw;
+        height: 25vh;
+        border-radius: 0;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.16);
+    }
+    #detailOrdering button {
+        margin-top: 40px;
+        background-color: #E1D8D1;
+        background-color: transparent;
+    }
+
+    #detailListing {
+        padding: 5px;
+        width: 73vw;
+        height: 250px;
+        margin-top: 3vh;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .quantitybox button {
+        font-size: 20px;
+    }
+    .quantitybox span {
+        font-size: 20px;
+        padding-left: 2vw;
+    }
+    #detailListing p {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    #detailListing h1 {
+        padding-top: 15px;
+        font-size: 30px;
+    }
+    #detailOrdering {
+        width: 80px;
+        margin-right: -45px;
+        margin-top: 80px;
+        align-self: flex-end;
+    }
+
+    .pageBack {
+        font-size: 40px;
+        left: 20px;
+        bottom: 5px;
+    }
+    #findVan {
+        padding: 0;
+    }
+    .map-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .mapvan {
+        width: 60%;
+        height: 100%;
+        margin: 0 5px 0 -35px;
+        background-position-y: center;
+    }
+    .vanListing {
+        width: 70%;
+        height: 70px;
+        margin-top: 0px;
+        background: #DAD1C0;
+
+    }
+
+    p {
+        margin: 0;
+        font-size: 13px;
+    }
+    .vanName {
+        font-size: 18px;
+        margin: 5px 0 10px 0;
+
+    }
+
+    .state button {
+        width: 134px;
+        height: 38px;
+        font-family: 'Josefin Slab', serif;
+    }
+}

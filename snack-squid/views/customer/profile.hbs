@@ -1,0 +1,37 @@
+<section id="homepage">
+    <title>Profile</title>
+    <link rel = "stylesheet" href="/customer/css/homepage.css">
+      <div class="container">
+         <section class='BG'></section>
+
+         <section class='Info'>
+            <a class="profile" href="/customer/order"><i class="fas fa-clipboard-list"></i></a>
+
+            <a href="/customer">
+               <div id="icon2"></div>
+            </a>
+
+            <div class="line" id="line-Profile"></div>
+            <h2> Hi, {{customer.givenName}} {{customer.familyName}}</h2>
+
+            <p class="profileDetail">- Email -<br>{{customer.emailAddress}}</p>
+            
+            <a href="/customer/profile/update/{{customer._id}}" class="edit-info">Edit Information</a>
+            <br>
+            <a id="logout" href="javascript:void(0);" onclick = "clearCart();"> Logout </a>
+         </section>
+
+         <form method="post" action="/customer/profile/logout" id="logoutform"></form>
+      
+       </div>
+</section>
+<script>
+   function clearCart(){
+      localStorage.removeItem('inCart');
+      localStorage.removeItem('totalCost');
+      localStorage.removeItem('cartNumbers');
+      localStorage.setItem('cartCost', 0);
+
+      document.getElementById("logoutform").submit();
+   }
+</script>

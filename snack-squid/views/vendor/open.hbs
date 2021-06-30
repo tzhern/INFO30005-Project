@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/vendor/css/open.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Raleway&display=swap" rel="stylesheet">
+<title>Open</title>
+<section id='open'>
+
+    <a class="logo" href="/vendor"></a>
+    <a href='/vendor/profile/logout' class="logout"> Logout </a>
+
+    <form action="/vendor/open-for-business/open" method='POST' id="open">
+        <p class="msg">Log in Successfully!</p>
+        <p>Please enter the location of the van</p>
+        <input type="text" placeholder="(e.g. 61 Swanston St, Melbourne, VIC)" name='location' class="location"
+            required>
+        <br>
+        {{!-- <button id="find-me">Show my location</button> --}}
+        <br>
+        <input type="submit" value='open for business' id="changeLocation">
+    </form>
+
+</section>
+
+<script src="/vendor/js/open.js"></script>

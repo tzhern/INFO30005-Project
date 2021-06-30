@@ -1,0 +1,19 @@
+<section id='login'>
+    <title>Log in</title>
+    <link rel="stylesheet" href="/vendor/css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Raleway&display=swap" rel="stylesheet">
+
+    <div class="container">
+        <div class="logo"></div>
+        {{#if error}}
+            <p id="errorMessage">{{this.error}}</p>
+        {{/if}}
+        <form action="/vendor" method="POST">
+            <input type="text" placeholder="Van Name" class="textbox_style van_name" name="vanName" required>
+            <p><a href="/vendor/register">New Vendor? Register here</a></p>
+            <input type="password" placeholder="Password" class="textbox_style password" name="password" required>
+            <input type="submit" value='Log In' id='vanlogin'>
+        </form>
+    </div>
+</section>

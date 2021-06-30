@@ -1,0 +1,83 @@
+<section id="signup">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/customer/css/homepage.css">
+    <link rel="stylesheet" href="/customer/css/signup.css">
+
+    <form action="/customer/signup" method="post">
+        <div class="container">
+            <section class='BG'></section>
+
+            <section class='Info'>
+                <a class="profile" href="/customer/profile"><i class="fas fa-user-alt"></i></a>
+                <a href="/customer">
+                    <div id="icon2"></div>
+                </a>
+                <div class="line"></div>
+                {{#if error}}
+                    <p id="errorMessage">{{this.error}}</p>
+                {{/if}}
+
+                <label for="givenName"><b>Given Name</b></label>
+                <br>
+                <input class="user-input" type="text" placeholder="Enter Given Name" name="givenName"
+                       pattern="[^\s][A-Za-z\s]+"
+                       title="Please enter a valid given name"
+                       required>
+                <br>
+
+                <style>
+                    .user-input {
+                        margin-top: 2px;
+                        margin-bottom: 3vh;
+                    }
+                </style>
+
+                <label for="familyName"><b>Family Name</b></label>
+                <br>
+                <input class="user-input" type="text" placeholder="Enter Family name" name="familyName"
+                       pattern="[^\s][A-Za-z\s]+"
+                       title="Please enter a valid family name"
+                       required>
+                <br>
+
+                <label for="emailAddress"><b>Email Address</b></label>
+                <br>
+                <input class="user-input" type="text" placeholder="Enter Email Address" name="emailAddress"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                       title="Please enter a valid email address"
+                       required>
+                <br>
+
+                <label for="password"><b>Password</b></label>
+                <br>
+                <input class="user-input" type="password" id="psw" placeholder="Enter Password" name="password"
+                       pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+                       title="Must contain at least one number and one alphabet character, and at least 8 or more characters"
+                       required>
+                <br>
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">At least one <b class="password-msg">alphabet</b> character</p>
+                    <p id="number" class="invalid">At least one <b class="password-msg">numerical digit</b></p>
+                    <p id="length" class="invalid">Minimum <b class="password-msg">8 characters</b></p>
+                </div>
+
+                <button class="signupbtn" onclick="clearCart();" type="submit">Signup</button>
+            </section>
+
+        </div>
+    </form>
+
+    <script src="/customer/js/signup.js"></script>
+
+</section>
+
+<script>
+    function clearCart(){
+        localStorage.removeItem('inCart');
+        localStorage.removeItem('totalCost');
+        localStorage.removeItem('cartNumbers');
+        localStorage.setItem('cartCost', '0');
+    }
+</script>

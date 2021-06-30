@@ -1,0 +1,76 @@
+/* The message box is shown when the user clicks on the password field */
+#message {
+    width: 75%;
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 10px 15px 10px 15px;
+    margin-top: 0px;
+}
+
+#message h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+#message p {
+    font-size: 15px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#message b{
+    font-size: 15px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -10px;
+    content: "✔";
+    margin-left: 10px;
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -10px;
+    content: "✖";
+    margin-left: 10px;
+
+}
+
+.password-msg{
+    font-size: 20px;
+}
+
+#psw{
+    margin-top: 2px;
+}
+
+#psw:focus{
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width:650px) {
+    .password-msg{
+        font-size: 18px;
+    }
+
+    #message {
+        width: 80%;
+        padding: 3px 6px 3px 6px;
+        margin-top: 0;
+    }
+    
+}

@@ -1,0 +1,70 @@
+body,
+html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Antic Slab', serif;}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://images.unsplash.com/photo-1541167760496-1628856ab772?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1494&q=80);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    margin-top: 150px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #a17b68;
+    background: url("../images/snacksquid_icon1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+form {
+    margin-top: 60px;
+}
+
+.textbox_style {
+    margin-top: 40px;
+    display: block;
+    height: 35px;
+    width: 360px;
+    font-size: 20px;
+    color: #999;
+}
+
+a{
+    color: #707070;
+    font-size: 16px;
+}
+
+#vanlogin {
+    width: 155px;
+    height: 50px;
+    border-radius: 32px;
+    background-color: #FCE0B3;
+    border: none;
+    font-size: 23px;
+    color: #B58169;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+    margin: 30px 0 0 25%;
+}
+
+input{
+    font-family: 'Raleway', sans-serif;}
+
+#vanlogin:hover {
+    cursor: pointer;
+}
+
+#errorMessage {
+    color: red;
+}

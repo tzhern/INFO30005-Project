@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="/vendor/css/order.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Raleway&display=swap" rel="stylesheet">
+
+<section id='order'>
+    <title>order</title>
+    <a class="logo" href="/vendor"></a>
+    <a href='/vendor/profile/logout' class="logout"> Logout </a>
+    <a class="profile" href="/vendor/profile"><i class="fas fa-user-circle"></i></a>
+
+    <div class="block"></div>
+    <div class="state">
+        <button id="preparingButton" onclick="preparingButton()">Preparing </button>
+        <button id="fulfilledButton" onclick="fulfilledButton()">Fulfilled</button>
+    </div>
+
+
+    <div class='preparingOrders' id="preparingOrders">
+        <p id="discountTime" hidden>{{discountTime.limit}}</p>
+        {{#each preparingOrders}}
+        <div class="oneOrder preparingOrder">
+            <table class="orderNum">
+                <tr>
+                    <span class="orderId" hidden>{{this._id}}</span>
+                    <td>Order No: {{this.orderNo}}</td>
+                    <td class="time">Time remaining:</td>
+                    <td class="updateTime" hidden>{{this.updateTime}}</td>
+                </tr>
+
+                <tr>
+                    <td><button id="hidebtn" onclick="hideDetail()">Hide</button></td>
+                    <td class="fulfilled"><button id="fulfilled"> Mark as Fulfilled</button></td>
+                </tr>
+
+            </table>
+
+            <table id="orderDetail" class="orderDetail">
+                <tr>
+                    <td>Customer Name: <span class="color">{{this.customerId.givenName}}</span></td>
+                </tr>
+
+                <tr>
+                    <td class="item-Detail"><span class="detail">{{this.details}}</span></td>
+                </tr>
+            </table>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class='fulfilledOrders' id="fulfilledOrders">
+        {{#each fulfilledOrders}}
+        <div class='oneOrder fulfilledOrder'>
+            <table class="orderNum">
+                <tr>
+                    <span class="orderId" hidden>{{this._id}}</span>
+                    <td>Order No. {{this.orderNo}}</td>
+                    <td class="time" hidden>Time remaining:</td>
+                    <td class="updateTime" hidden>{{this.updateTime}}</td>
+                </tr>
+
+                <tr>
+                    <td><button id="hidebtn">Hide</button></td>
+                    <td class="pickedup"><button id="pickedup"> Mark as Picked Up</button></td>
+                </tr>
+
+            </table>
+
+            <table id="orderDetail" class="orderDetail">
+                <tr>
+                    <td>Customer Name: <span class="color">{{this.customerId.givenName}}</span></td>
+                </tr>
+
+                <tr>
+                    <td class="item-Detail"><span class="detail">{{this.details}}</span></td>
+                </tr>
+            </table>
+        </div>
+        {{/each}}
+    </div>
+</section>
+<script src="/vendor/js/order.js"></script>

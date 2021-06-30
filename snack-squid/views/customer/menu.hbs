@@ -1,0 +1,82 @@
+<section id="menu">
+    <title>Menu</title>
+    <link rel="stylesheet" href="/customer/css/menu.css">
+
+    <div class="overlay" id="overlay">
+        <button onclick="off()"><i class="fas fa-arrow-alt-circle-left"></i></button>
+        <div class="products-container">
+            <div class="products">
+            </div>
+        </div>
+    </div>
+
+    <a href="/customer">
+        <div class="icon"></div>
+    </a>
+    <div class="container">
+        <a class="profile" href="/customer/profile"><i class="fas fa-user-circle"></i></a>
+        <h3 class="cart"><i class="fas fa-shopping-basket"></i> Cart: <span id="basket_span">0</span></h3>
+
+        <h1 id="title">MENU</h1>
+
+        <div class="snacks">
+
+            <div id="subtitle1">
+                <div id="snackicon-img"></div>
+                <h2>Snacks</h2>
+            </div>
+
+            {{!-- snack item --}}
+            {{#each snacks}}
+            <div class="foodListing">
+                <a class="hrefFoodDetail" href="/{{this.tag}}/">
+                    <img src="/customer/images/{{this.photo}}" alt="{{this.foodName}}"></a>
+
+                <div id="food-detail">
+                    <span class="foodName">{{this.foodName}}</span>
+                    <span class="foodPrice">${{this.price}}</span>
+                    <button type="button" class="addCart">+</button>
+                    <span class="quantity"></span>
+                    <button type="button" class="removeCart">-</button>
+                </div>
+
+            </div>
+            {{/each}}
+
+        </div>
+
+        <div class="drinks">
+
+            <div id="subtitle2">
+                <div id="drinkicon-img"></div>
+                <h2>Drinks</h2>
+            </div>
+
+            {{#each drinks}}
+            <div class="foodListing">
+                <a class="hrefFoodDetail" href="/{{this.tag}}/">
+                    <img src="/customer/images/{{this.photo}}" alt="{{this.foodName}}"></a>
+
+                <div id="food-detail">
+                    <span class="foodName">{{this.foodName}}</span>
+                    <span class="foodPrice">${{this.price}}</span>
+                    <button type="button" class="addCart">+</button>
+                    <span class="quantity">0</span>
+                    <button type="button" class="removeCart">-</button>
+                </div>
+
+            </div>
+            {{/each}}
+
+        </div>
+
+        <div class="Ordering">
+            <button id="ordering-text" onclick="on()">View Cart</button>
+            <button id="cartbutton" onclick="on()"><img id="Cart-img"
+                    src="/customer/images/Shopping cartS.png"></button>
+        </div>
+
+
+    <script src="/customer/js/cart.js"></script>
+
+</section>

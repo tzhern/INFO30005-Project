@@ -1,0 +1,43 @@
+<section>
+    <title>Register</title>
+    <link rel="stylesheet" href="/vendor/css/registration.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Raleway&display=swap" rel="stylesheet">
+
+    <a href="/vendor" class="logo"></a>
+    <div class="board">
+        <p class="registration">Registration</p>
+        <div class="information">
+            {{#if error}}
+                <p id="errorMessage">{{this.error}}</p>
+            {{/if}}
+            <form action="/vendor/register" method="POST">
+                <span name="valid_name">Enter a valid van name</span>
+                <input type="text" placeholder="Van Name" class="textbox_style" name="vanName"
+                       pattern="[^\s][A-Za-z\s]+"
+                       title="Please enter a valid van name"
+                       required>
+
+                <span name=valid_email>Enter a valid email address</span>
+                <input type="text" placeholder="Email Address" class="textbox_style" name="emailAddress"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                       title="Please enter a valid email address"
+                       required>
+
+                <span name="valid_number">Enter a valid mobile number</span>
+                <input type="tel" placeholder="Mobile Number" class="textbox_style" name="mobileNumber"
+                       pattern="[0-9]{8,15}"
+                       title="Please enter a valid phone number"
+                       required>
+
+                <span name="valid_password">Enter a valid password</span>
+                <input type="password" placeholder="Password" class="textbox_style" name="password"
+                       pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+                       title="Must contain at least one number and one alphabet character, and at least 8 or more characters"
+                       required>
+                <input type="submit" value="Sign Up" class="signup" id="signup">
+            </form>
+        </div>
+    </div>
+
+</section>

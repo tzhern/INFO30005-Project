@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/vendor/css/open.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Raleway&display=swap" rel="stylesheet">
+<title>Van Profile</title>
+
+<section id="vanProfile">
+    <a class="logo" href="/vendor"></a>
+    <a class="profile" href="/vendor/order"><i class="fas fa-clipboard-list"></i></a>
+
+
+    <p class="current_location">Current Location: <span class="text_location">{{Van.textLocation}}</span> </p>
+
+
+    <form action="/vendor/profile/change" method="POST" id="newLocation">
+        <p>Please enter the new location of the van</p>
+        <br>
+        <input type="text" name="newLocation" class='newLocation' required>
+        <br>
+        <input id="profileChangeLocation" type="submit" value="Change the Location">
+    </form>
+
+    {{!-- <button id="profilefind-me">Use my location</button> --}}
+    <a href="/vendor/profile/close" class="close">Close Business for Today</a>
+    <a href="/vendor/profile/logout" class="logout">Log Out</a>
+</section>
+
+
+<script src="/vendor/js/profile.js"></script>

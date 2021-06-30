@@ -1,0 +1,46 @@
+<section id="homepage">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/customer/css/homepage.css">
+    <link rel="stylesheet" href="/customer/css/signup.css">
+
+    <div class="container">
+        <section class='BG'></section>
+
+        <section class='Info'>
+            <a class="profile" href="/customer/profile"><i class="fas fa-user-alt" aria-hidden="true"></i></a>
+
+            <a href="/customer">
+                <div id="icon2"></div>
+            </a>
+
+            <div class="line" id="line-Profile"></div>
+            <h2> Hi, {{customer.givenName}} {{customer.familyName}}</h2>
+
+            <form method="post" action='/customer/profile/update/{{customer._id}}'>
+                <input class="user-input" name="givenName" placeholder="Given Name: {{customer.givenName}}">
+                <br>
+                <input id="edit-lastline" class="user-input" name="familyName"
+                    placeholder="Family Name: {{customer.familyName}}">
+                <br>
+                <input class="user-input" type="password" id="psw" placeholder="Enter new Password" name="password"
+                    pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+                    title="Must contain at least one number and one alphabet character, and at least 8 or more characters">
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">At least one <b class="password-msg">alphabet</b> character</p>
+                    <p id="number" class="invalid">At least one <b class="password-msg">numerical digit</b></p>
+                    <p id="length" class="invalid">Minimum <b class="password-msg">8 characters</b></p>
+                </div>
+                <br>
+                <button class="button-edit" type="submit">Update</button>
+            </form>
+
+
+        </section>
+
+        <form method="post" action="/customer/profile/logout" id="logoutform"></form>
+
+    </div>
+</section>
+
+<script src="/customer/js/signup.js"></script>

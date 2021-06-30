@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+body,
+html {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: 'Info BG BG';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Info {
+    grid-area: Info;
+    margin-left: 5vw;
+    margin-top: 5vw;
+}
+
+.profile {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    color: #707070;
+    font-size: 55px;
+}
+
+
+/* For homepage */
+
+h1 {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: 400;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #707070;
+    border-top: 13px solid #707070;
+    ;
+    width: 25vw;
+    letter-spacing: -3px;
+    margin-bottom: 15vh;
+}
+
+.login,
+.signup,
+.findvan {
+    display: block;
+    padding-left: 15px;
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: #707070;
+    background-color: lightgray;
+    height: 2vh;
+    border: none;
+    text-align: left;
+    text-decoration: none;
+    transition: ease-in-out, .3s ease-in-out;
+}
+
+.findvan:hover {
+    background: #af9797;
+    color: rgb(243, 243, 243);
+}
+
+.login {
+    display: block;
+    width: 30%;
+}
+
+.signup {
+    display: block;
+    width: 40%;
+}
+
+.login:hover {
+    width: 55%;
+}
+
+.signup:hover {
+    width: 65%;
+}
+
+.findvan {
+    padding-left: 0;
+    padding-top: 2vh;
+    margin-top: 10vh;
+    font-weight: 400;
+    background: #EBE5E5;
+    width: 20vw;
+    height: 6.5vh;
+    border-radius: 37px;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.icon {
+    height: 200px;
+    width: 200px;
+    background: url("../images/snacksquid_icon1.png");
+    background-size: cover;
+}
+
+
+/* For Login + Signup */
+
+#icon2 {
+    margin: 0 7vw 0 7vw;
+    height: 250px;
+    width: 250px;
+    background: url("../images/snacksquid_icon2.png");
+    background-size: cover;
+}
+
+.line {
+    border-bottom: 13px solid #707070;
+    width: 90%;
+    margin: 20px 0 50px 0;
+}
+
+.BG {
+    grid-area: BG;
+    background-image: url("../images/realvan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label,
+b,
+h2 {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.user-input {
+    font-weight: 400;
+    color: lightslategray;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 40%;
+    transition: ease-in-out, .5s ease-in-out;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    padding: 5px 12px 10px 12px;
+    margin-top: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(219, 219, 219);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(95, 95, 95);
+    text-decoration: none;
+}
+
+::placeholder {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: #C0C0C0;
+}
+
+.user-input:focus {
+    outline: none;
+    width: 80%;
+}
+
+.user-input:valid {
+    width: 80%;
+}
+
+input[name="remember"] {
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+
+/* For customer Profile */
+
+.profileDetail {
+    font-size: 23px;
+    line-height: 30px;
+    line-height: 40px;
+    color: #535353;
+    background-color: rgb(240, 240, 240);
+    width: 90%;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#line-Profile {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: right;
+    margin-top: 0;
+    margin-right: 10%;
+    color: #707070;
+}
+
+.edit-info {
+    display: block;
+    width: 90%;
+    height: 60px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 37px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 52px;
+    color: #535353;
+    cursor: pointer;
+}
+
+#logout {
+    width: 35%;
+    height: 40px;
+    font-size: 25px;
+    line-height: 35px;
+    text-decoration: none;
+    color: #E9D7BD;
+    margin-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.edit-info:hover,
+#logout:hover {
+    background: #af9797;
+    color: rgb(243, 243, 243);
+    transition: .3s all ease-in-out;
+}
+
+
+/* Profile Editing */
+
+#edit-lastline,
+#psw {
+    margin-bottom: 20px;
+    margin-top: 2px;
+}
+
+.button-edit {
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width:1000px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'Info BG';
+    }
+    h1 {
+        font-size: 7vw;
+        border-top: 2vh solid #707070;
+        ;
+        width: 40vw;
+        letter-spacing: -0.5vw;
+    }
+    .login,
+    .signup,
+    .findvan {
+        font-size: 4vw;
+    }
+    .findvan {
+        margin-top: 7vh;
+        font-weight: 400;
+        width: 30vw;
+        font-size: 2.5vw;
+    }
+    .user-input {
+        font-size: 20px;
+        width: 50%;
+    }
+     ::placeholder {
+        font-size: 15px;
+    }
+    .profile {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'Info BG';
+    }
+    h1 {
+        font-size: 7vw;
+        border-top: 2vh solid #707070;
+        ;
+        width: 40vw;
+        letter-spacing: -0.5vw;
+    }
+    .login,
+    .signup,
+    .findvan {
+        font-size: 5vw;
+        height: 1.6vh;
+    }
+    .findvan {
+        margin-top: 4vh;
+        font-weight: 400;
+        width: 50vw;
+        height: 4vh;
+        font-size: 4.5vw;
+        padding-top: 5px;
+    }
+    .Info {
+        margin-left: 3vw;
+        margin-top: 3vw;
+    }
+    .profile {
+        top: 5px;
+        left: 5px;
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    .profileDetail {
+        margin-top: 40px;
+    }
+    .profileDetail,
+    .edit-info {
+        font-size: 20px;
+    }
+    .button-edit {
+        width: 60%;
+    }
+}
+
+#errorMessage {
+    color: red;
+}

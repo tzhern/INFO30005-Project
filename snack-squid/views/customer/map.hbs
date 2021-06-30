@@ -1,0 +1,51 @@
+<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+<link rel="stylesheet" href="/customer/css/menu.css">
+
+<section id="findVan">
+
+
+    <main class='map-container' id=>
+
+
+        <section id='map'>
+        </section>
+
+        <section class='location'>
+
+            <div class="top-bar">
+
+                <a href="/customer">
+                    <div id="icon-map" class="icon"></div>
+                </a>
+
+                <div class="mapvan"></div>
+
+                <a id="map-profile" class="profile" href="/customer/profile"><i class="fas fa-user-circle"></i></a>
+
+            </div>
+
+            <div class="vanContainer">
+                {{#each Vans}}
+                <div class="vanListing">
+                    <div class="oneVan">
+                        <p class="vanName">{{this.vanName}}</p>
+                        <p class="vanLocation">{{this.textLocation}}</p>
+                        <p class="geoLocation" hidden>{{this.location}}</p>
+                        <br>
+                    </div>
+                </div>
+                <div id="lineMap" class="line"></div>
+
+                {{/each}}
+            </div>
+
+        </section>
+    </main>
+
+
+
+
+
+</section>
+<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+<script src="/customer/js/map.js"></script>
