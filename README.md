@@ -6,6 +6,8 @@
 * [Introduction](#introduction)
 * [Team Members](#team-members)
 * [Technologies](#technologies)
+* [Local Installation](#local-installation)
+* [Testing](#testing)
 * [Deliverable 2 Instruction](#deliverable-2-instruction)
 * [Deliverable 3 Instruction](#deliverable-3-instruction)
 
@@ -30,7 +32,7 @@ Project is created with:
 * Express : 4.17.1
 * Mongoose : 5.12.3
 
-### Local installation
+### Local Installation
 ```
 git clone git@github.com:tzhern/INFO30005-Project.git
 cd INFO30005-Project/snack-squid
@@ -39,9 +41,11 @@ npm start
 ```
 
 ### Testing 
+```
 npm test -- open_controller_unit.js   unit testing van's open status
 npm test -- profile_controller_unit.js   unit testing van's close status
 npm test -- one_van_status_integration.js   integration test van's status
+```
 
 ### Dummy Customer account
 1. email address: cathy@gmail.com   password: 1234qwer
