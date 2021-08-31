@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99422e8f-0d57-4251-a6b8-8afa2537a223" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="99422e8f-0d57-4251-a6b8-8afa2537a223" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +16,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1syFYfznAEXzrasPhPm2UFZhwlC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -33,6 +31,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -62,6 +61,14 @@
       <workItem from="1623652756597" duration="1062000" />
       <workItem from="1623830909987" duration="1000" />
       <workItem from="1623907545161" duration="1887000" />
+      <workItem from="1629263326604" duration="3983000" />
+      <workItem from="1629342601296" duration="150000" />
+      <workItem from="1629343094445" duration="63000" />
+      <workItem from="1629671940543" duration="21437000" />
+      <workItem from="1629787288294" duration="427000" />
+      <workItem from="1629971461464" duration="630000" />
+      <workItem from="1630069610013" duration="697000" />
+      <workItem from="1630380988953" duration="299000" />
     </task>
     <servers />
   </component>

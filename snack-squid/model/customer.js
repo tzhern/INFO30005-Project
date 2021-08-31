@@ -5,7 +5,6 @@ const customerSchema = new mongoose.Schema({
     familyName: { type: String, required: true },
     emailAddress: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    // orders: [{ type: mongoose.Schema.Types.ObjectId, ref: 'orders' }]
 })
 
 customerSchema.methods.generateHash = function(password) {

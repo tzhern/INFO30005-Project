@@ -42,10 +42,6 @@ const flash = require('connect-flash-plus')
 
 var helpers = require('handlebars-helpers')();
 
-// const jwt = require('jsonwebtoken')
-// const dotenv = require('dotenv').config()
-
-
 app.use(cors({
     credentals: true,
     origin: "http://localhost:3000"
@@ -86,28 +82,17 @@ app.use('/customer/menu', menuRouterCT)
 app.use('/customer/order', orderRouterCT)
 
 app.use('/customer/choose-van', findVanRouterCT);
+
 // Vendor app
-
-
 app.use('/vendor/open-for-business', openRouterVD)
 
 app.use('/vendor', loginRouterVD)
 
 app.use('/vendor/order', orderRouterVD)
-    // routers in register
-app.use('/vendor/register', registerRouterVD)
+
+app.use('/vendor/register', registerRouterVD) // routers in register
 
 app.use('/vendor/profile', profileRouterVD)
-
-// app.get('/404-NOT-FOUND', (req, res) => {
-//     res.render(path.join(__dirname + '/views/404NotFound'))
-// })
-
-// app.all('*', (req, res) => {
-//     // 'default' route to catch user errors
-//     res.status(404)
-//     res.redirect('/404-NOT-FOUND')
-// })
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {

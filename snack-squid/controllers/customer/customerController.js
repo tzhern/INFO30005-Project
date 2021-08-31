@@ -1,18 +1,4 @@
 const Customer = require('../../model/customer')
-const ObjectId = require('mongoose').Types.ObjectId
-
-
-const OPTIONS_SERVER = {
-    maxAge: 1000 * 60 * 60 * 24, // would expire after 24 hours
-    httpOnly: true, // The cookie only accessible by the web server
-    signed: false // Indicates if the cookie should be signed
-}
-
-const OPTIONS_LOCAL = {
-    maxAge: 1000 * 60 * 60 * 24, // would expire after 24 hours
-    httpOnly: false, // The cookie only accessible by the web server
-    signed: false // Indicates if the cookie should be signed
-}
 
 // express-validator, to validate user data in forms
 const expressValidator = require('express-validator')

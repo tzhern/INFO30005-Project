@@ -71,7 +71,7 @@ const placeOrder = async(req, res) => {
     })
 
     // push order to database
-    await newOrder.save((err, result) => {
+    await newOrder.save((err) => {
         if (err) {
             console.log("failed to save order to the database!")
             return res.redirect('/404-NOT-FOUND')

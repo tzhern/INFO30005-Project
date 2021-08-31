@@ -1,5 +1,3 @@
-// const { model } = require("mongoose");
-
 // Update the count down every 1 second
 let x = setInterval(function() {
 
