@@ -1,6 +1,5 @@
 ## **The University of Melbourne - INFO30005 (Web Information Technologies) Project**
-
-### Note: This is just the copy of the original project repository.
+` Note: This is just the copy of the original project repository, the original project repository is kept private and is available upon request. `
 
 ## Table of contents
 * [Introduction](#introduction)
